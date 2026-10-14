@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -5,19 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f9fc">
   <meta name="description" content="Data With Swapnil — Data analytics portfolio featuring SQL, Excel, Power BI, Python, statistical analysis, and selected projects.">
+  <meta name="color-scheme" content="light dark">
   <title>Data With Swapnil | Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Data With Swapnil home"><span class="brand-mark">D<span>W</span></span><span>Data With <b>Swapnil</b></span></a>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation"><span></span><span></span></button>
+      <a class="brand" href="#home" aria-label="Data With Swapnil home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M10 11H21C28 11 32 15 32 22S28 33 21 33H10V11Z"
+              stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M19 18H27C31 18 34 21 34 25S31 31 27 31H19"
+              stroke="#A8D5FF" stroke-width="3" stroke-linecap="round"/>
+            <path d="M14 28L19 23L23 26L31 17"
+              stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="31" cy="17" r="2" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <span class="brand-name">Data With <b>Swapnil</b></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle"
+        type="button" aria-expanded="false"
+        aria-controls="nav-links" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+
       <div class="nav-links" id="nav-links">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark mode</span></button>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button"
+          aria-label="Switch to dark theme">
+          <span class="theme-icon" aria-hidden="true">☾</span>
+          <span class="theme-label">Dark mode</span>
+        </button>
       </div>
     </nav>
   </header>
@@ -25,63 +59,417 @@
   <main id="main">
     <section class="hero section container" id="home">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="status-dot"></span> DATA ANALYTICS PORTFOLIO</div>
-        <p class="hero-kicker">Hello, I'm Swapnil.</p>
-        <h1>I turn data into <span class="gradient-text">clear decisions.</span></h1>
-        <p class="hero-description">I use data analysis, business intelligence, and statistical thinking to explore business questions, identify patterns, and turn findings into clear, practical insights.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">↘</span></a><a class="button button-secondary" href="#contact">Let's connect <span aria-hidden="true">↗</span></a></div>
-        <div class="hero-footnote"><span class="mini-line"></span><span>Curiosity in. Clarity out.</span></div>
-      </div>
-      <div class="hero-art reveal" aria-label="Illustrative analytics chart" role="img">
-        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <div class="floating-tag tag-top"><span class="tag-dot"></span> DATA → INSIGHT</div>
-        <div class="analytics-card">
-          <div class="card-topline"><div><span class="card-label">ANALYTICS OVERVIEW</span><h2>Make data useful.</h2></div><span class="card-menu">•••</span></div>
-          <div class="chart-area"><div class="chart-y-labels"><span>100</span><span>75</span><span>50</span><span>25</span></div><div class="chart-main"><div class="chart-grid"><i></i><i></i><i></i><i></i></div><svg class="chart-svg" viewBox="0 0 340 150" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#2878f0" stop-opacity=".28"/><stop offset="100%" stop-color="#2878f0" stop-opacity="0"/></linearGradient></defs><path d="M0,125 C25,118 35,96 58,105 S90,91 112,97 S145,56 170,70 S205,84 225,48 S265,60 285,29 S320,32 340,10 L340,150 L0,150Z" fill="url(#chart-fill)"/><path d="M0,125 C25,118 35,96 58,105 S90,91 112,97 S145,56 170,70 S205,84 225,48 S265,60 285,29 S320,32 340,10" fill="none" stroke="#2878f0" stroke-width="3" stroke-linecap="round"/></svg><div class="chart-x-labels"><span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span><span>NOV</span></div></div></div>
-          <div class="chart-bottom"><div class="legend"><span class="legend-dot"></span> Illustrative trend</div><span class="sample-label">Example graphic</span></div>
+        <div class="eyebrow">
+          <span class="status-dot"></span> DATA ANALYTICS PORTFOLIO
         </div>
-        <div class="floating-tag tag-bottom"><span class="sparkle">✳</span> ASK BETTER QUESTIONS</div>
-        <div class="art-cross cross-one">+</div><div class="art-cross cross-two">+</div>
+
+        <p class="hero-kicker">Hello, I'm Swapnil.</p>
+
+        <h1>I turn data into <span class="gradient-text">clear decisions.</span></h1>
+
+        <p class="hero-description">
+          I use data analysis, business intelligence, and statistical thinking
+          to explore business questions, identify patterns, and turn findings
+          into clear, practical insights.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            Explore projects <span aria-hidden="true">↘</span>
+          </a>
+          <a class="button button-secondary" href="#contact">
+            Let's connect <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="hero-footnote">
+          <span class="mini-line"></span>
+          <span>Curiosity in. Clarity out.</span>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Illustrative analytics chart" role="img">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+
+        <div class="floating-tag tag-top">
+          <span class="tag-dot"></span> DATA → INSIGHT
+        </div>
+
+        <div class="analytics-card">
+          <div class="card-topline">
+            <div>
+              <span class="card-label">ANALYTICS OVERVIEW</span>
+              <h2>Make data useful.</h2>
+            </div>
+            <span class="card-menu" aria-hidden="true">•••</span>
+          </div>
+
+          <div class="chart-area">
+            <div class="chart-y-labels">
+              <span>100</span><span>75</span><span>50</span><span>25</span>
+            </div>
+
+            <div class="chart-main">
+              <div class="chart-grid" aria-hidden="true">
+                <i></i><i></i><i></i><i></i>
+              </div>
+
+              <svg class="chart-svg" viewBox="0 0 340 150"
+                preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#2878f0" stop-opacity=".28"/>
+                    <stop offset="100%" stop-color="#2878f0" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="chart-area-fill"
+                  d="M0,125 C25,118 35,96 58,105 S90,91 112,97 S145,56 170,70 S205,84 225,48 S265,60 285,29 S320,32 340,10 L340,150 L0,150Z"
+                  fill="url(#chart-fill)"/>
+                <path class="chart-line"
+                  d="M0,125 C25,118 35,96 58,105 S90,91 112,97 S145,56 170,70 S205,84 225,48 S265,60 285,29 S320,32 340,10"
+                  fill="none" stroke="#2878f0" stroke-width="3"
+                  stroke-linecap="round"/>
+              </svg>
+
+              <div class="chart-x-labels">
+                <span>JAN</span><span>MAR</span><span>MAY</span>
+                <span>JUL</span><span>SEP</span><span>NOV</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-bottom">
+            <div class="legend">
+              <span class="legend-dot"></span> Illustrative trend
+            </div>
+            <span class="sample-label">Example graphic</span>
+          </div>
+        </div>
+
+        <div class="floating-tag tag-bottom">
+          <span class="sparkle">✳</span> ASK BETTER QUESTIONS
+        </div>
+
+        <div class="art-cross cross-one" aria-hidden="true">+</div>
+        <div class="art-cross cross-two" aria-hidden="true">+</div>
       </div>
     </section>
 
-    <div class="ticker" aria-label="Areas of focus"><div class="ticker-track"><span>DATA ANALYSIS</span><i>✳</i><span>BUSINESS INTELLIGENCE</span><i>✳</i><span>STATISTICAL ANALYSIS</span><i>✳</i><span>DATA STORYTELLING</span><i>✳</i><span>DATA ANALYSIS</span><i>✳</i><span>BUSINESS INTELLIGENCE</span><i>✳</i><span>STATISTICAL ANALYSIS</span><i>✳</i><span>DATA STORYTELLING</span><i>✳</i></div></div>
+    <div class="ticker" aria-label="Areas of focus">
+      <div class="ticker-track">
+        <span>DATA ANALYSIS</span><i>✳</i>
+        <span>BUSINESS INTELLIGENCE</span><i>✳</i>
+        <span>STATISTICAL ANALYSIS</span><i>✳</i>
+        <span>DATA STORYTELLING</span><i>✳</i>
+        <span>DATA ANALYSIS</span><i>✳</i>
+        <span>BUSINESS INTELLIGENCE</span><i>✳</i>
+        <span>STATISTICAL ANALYSIS</span><i>✳</i>
+        <span>DATA STORYTELLING</span><i>✳</i>
+      </div>
+    </div>
 
     <section class="section container section-pad" id="about">
-      <div class="section-heading reveal"><p class="eyebrow">01 / ABOUT</p><h2>Understanding data.<br><span class="muted-heading">Communicating what matters.</span></h2></div>
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>Understanding data.<br>
+          <span class="muted-heading">Communicating what matters.</span>
+        </h2>
+      </div>
+
       <div class="about-grid">
         <div class="about-intro reveal">
-          <p class="large-copy">Good analysis connects the right questions with <em>evidence-based decisions.</em></p>
-          <p class="body-copy">I use data analysis, statistical methods, and business intelligence tools to explore business questions, identify patterns, and communicate actionable insights.</p>
-          <p class="body-copy">My analytical toolkit includes SQL, Excel, Power BI, Python, and statistical modeling. Through projects and case studies, I focus on understanding the problem, choosing an appropriate analytical approach, interpreting the results, and translating findings into practical recommendations.</p>
-          <p class="body-copy">I am also exploring how generative AI and agentic workflows can support analytical tasks and improve the way insights are developed and communicated.</p>
+          <p class="large-copy">
+            Good analysis connects the right questions with
+            <em>evidence-based decisions.</em>
+          </p>
+          <p class="body-copy">
+            I use data analysis, statistical methods, and business intelligence
+            tools to explore business questions, identify patterns, and
+            communicate actionable insights.
+          </p>
+          <p class="body-copy">
+            My analytical toolkit includes SQL, Excel, Power BI, Python, and
+            statistical modeling. Through projects and case studies, I focus
+            on understanding the problem, choosing an appropriate analytical
+            approach, interpreting the results, and translating findings into
+            practical recommendations.
+          </p>
+          <p class="body-copy">
+            I am also exploring how generative AI and agentic workflows can
+            support analytical tasks and improve the way insights are
+            developed and communicated.
+          </p>
         </div>
-        <div class="about-note reveal"><div class="note-icon">↗</div><p class="note-title">Education & development</p><p>B.Tech in Electronics & Communication Engineering<br>Dehradun Institute of Technology</p><div class="note-line"></div><p>Data Analyst + Agentic AI Bootcamp<br>AnalytixLabs · In progress</p></div>
+
+        <div class="about-note reveal">
+          <div class="note-icon" aria-hidden="true">↗</div>
+          <p class="note-title">Education & development</p>
+          <p>B.Tech in Electronics & Communication Engineering<br>
+            Dehradun Institute of Technology</p>
+          <div class="note-line"></div>
+          <p>Data Analyst + Agentic AI Bootcamp<br>
+            AnalytixLabs · In progress</p>
+        </div>
       </div>
     </section>
 
-    <section class="section skills-section" id="skills"><div class="container section-pad">
-      <div class="section-heading reveal"><p class="eyebrow">02 / ANALYTICAL TOOLKIT</p><h2>Tools for turning<br><span class="muted-heading">data into insight.</span></h2><p class="section-subtitle">Analytical methods and technologies used across my projects, case studies, and learning.</p></div>
-      <div class="skills-grid">
-        <article class="skill-card reveal"><div class="skill-number">01</div><div class="skill-icon">▦</div><h3>Spreadsheets & analysis</h3><p>Data preparation, analysis, validation, and business reporting.</p><div class="skill-chips"><span>Excel</span><span>Data cleaning</span><span>Reporting</span></div></article>
-        <article class="skill-card reveal"><div class="skill-number">02</div><div class="skill-icon">⌘</div><h3>SQL & data preparation</h3><p>Querying datasets, transforming data, and answering business questions.</p><div class="skill-chips"><span>SQL</span><span>Data transformation</span><span>Analysis</span></div></article>
-        <article class="skill-card reveal"><div class="skill-number">03</div><div class="skill-icon">▥</div><h3>BI & visualization</h3><p>Presenting performance, trends, and findings through clear visuals.</p><div class="skill-chips"><span>Power BI</span><span>Dashboards</span><span>Data storytelling</span></div></article>
-        <article class="skill-card reveal"><div class="skill-number">04</div><div class="skill-icon">⌁</div><h3>Python & statistics</h3><p>Exploring data, evaluating patterns, and applying statistical methods.</p><div class="skill-chips"><span>Python</span><span>Regression</span><span>Predictive modeling</span></div></article>
-        <article class="skill-card reveal"><div class="skill-number">05</div><div class="skill-icon">✳</div><h3>AI-enabled analytics</h3><p>Exploring AI-assisted analysis and workflows that support analytical tasks.</p><div class="skill-chips"><span>Generative AI</span><span>Agentic AI</span><span>n8n</span></div></article>
-      </div>
-    </div></section>
+    <section class="section skills-section" id="skills">
+      <div class="container section-pad">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / ANALYTICAL TOOLKIT</p>
+          <h2>Tools for turning<br>
+            <span class="muted-heading">data into insight.</span>
+          </h2>
+          <p class="section-subtitle">
+            Analytical methods and technologies used across my projects,
+            case studies, and learning.
+          </p>
+        </div>
 
-    <section class="section container section-pad" id="projects"><div class="section-heading project-heading reveal"><div><p class="eyebrow">03 / SELECTED PROJECTS</p><h2>Practical analysis.<br><span class="muted-heading">Clear business context.</span></h2></div><p class="section-subtitle">Selected work demonstrating SQL, data analysis, and business intelligence. Explore each repository for project materials and details.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-number">01</div>
+            <div class="skill-icon" aria-hidden="true">▦</div>
+            <h3>Spreadsheets & analysis</h3>
+            <p>Data preparation, analysis, validation, and business reporting.</p>
+            <div class="skill-chips">
+              <span>Excel</span><span>Data cleaning</span><span>Reporting</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-number">02</div>
+            <div class="skill-icon" aria-hidden="true">⌘</div>
+            <h3>SQL & data preparation</h3>
+            <p>Querying datasets, transforming data, and answering business questions.</p>
+            <div class="skill-chips">
+              <span>SQL</span><span>Data transformation</span><span>Analysis</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-number">03</div>
+            <div class="skill-icon" aria-hidden="true">▥</div>
+            <h3>BI & visualization</h3>
+            <p>Presenting performance, trends, and findings through clear visuals.</p>
+            <div class="skill-chips">
+              <span>Power BI</span><span>Dashboards</span><span>Data storytelling</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-number">04</div>
+            <div class="skill-icon" aria-hidden="true">⌁</div>
+            <h3>Python & statistics</h3>
+            <p>Exploring data, evaluating patterns, and applying statistical methods.</p>
+            <div class="skill-chips">
+              <span>Python</span><span>Regression</span><span>Predictive modeling</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-number">05</div>
+            <div class="skill-icon" aria-hidden="true">✳</div>
+            <h3>AI-enabled analytics</h3>
+            <p>Exploring AI-assisted analysis and workflows that support analytical tasks.</p>
+            <div class="skill-chips">
+              <span>Generative AI</span><span>Agentic AI</span><span>n8n</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container section-pad" id="projects">
+      <div class="section-heading project-heading reveal">
+        <div>
+          <p class="eyebrow">03 / SELECTED PROJECTS</p>
+          <h2>Practical analysis.<br>
+            <span class="muted-heading">Clear business context.</span>
+          </h2>
+        </div>
+        <p class="section-subtitle">
+          Selected work demonstrating SQL, data analysis, and business
+          intelligence. Explore each repository for project materials and details.
+        </p>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter-button active" type="button"
+          data-filter="all" aria-pressed="true">All projects</button>
+        <button class="filter-button" type="button"
+          data-filter="dashboard" aria-pressed="false">Power BI</button>
+        <button class="filter-button" type="button"
+          data-filter="sql" aria-pressed="false">SQL</button>
+      </div>
+
       <div class="projects-grid" id="projects-grid">
-        <article class="project-card project-blue reveal" data-category="dashboard"><div class="project-visual visual-dashboard"><div class="visual-window"><div class="visual-window-top"><span></span><span></span><span></span><b>SALES DASHBOARD</b></div><div class="visual-metrics"><i><b></b><em></em></i><i><b></b><em></em></i><i><b></b><em></em></i></div><div class="visual-bars"><i style="height:32%"></i><i style="height:48%"></i><i style="height:41%"></i><i style="height:70%"></i><i style="height:57%"></i><i style="height:86%"></i><i style="height:68%"></i><i style="height:100%"></i></div></div><span class="visual-sticker">01 / BUSINESS INTELLIGENCE</span></div><div class="project-content"><div class="project-meta"><span>POWER BI / DASHBOARD</span><span>01</span></div><h3>AdventureWorks Sales Analytics Dashboard</h3><p>A sales analytics dashboard project focused on presenting business performance through visual analysis.</p><div class="project-bottom"><span class="project-type">Dashboard</span><a class="project-arrow" href="https://github.com/SwapnilSamarSingh/AdventureWorks-Sales-Analytics-Dashboard" target="_blank" rel="noopener noreferrer" aria-label="View AdventureWorks Sales Analytics Dashboard on GitHub">↗</a></div></div></article>
-        <article class="project-card project-lilac reveal" data-category="sql"><div class="project-visual visual-query"><div class="code-window"><div class="code-top"><span></span><span></span><span></span><small>SQL DATA WAREHOUSE</small></div><div class="code-lines"><p><b>01</b> <span class="code-purple">SELECT</span> <span class="code-blue">...</span></p><p><b>02</b> <span class="code-purple">FROM</span> source_data</p><p><b>03</b> <span class="code-purple">JOIN</span> related_data</p><p><b>04</b> <span class="code-purple">ON</span> key = key;</p></div><div class="query-result"><span>DATA WORKFLOW</span><i></i><i></i><i></i></div></div><span class="visual-sticker">02 / SQL</span></div><div class="project-content"><div class="project-meta"><span>SQL / DATA WAREHOUSING</span><span>02</span></div><h3>SQL Data Warehouse Project</h3><p>A SQL-focused project exploring the organization and preparation of data for analytical use.</p><div class="project-bottom"><span class="project-type">SQL</span><a class="project-arrow" href="https://github.com/SwapnilSamarSingh/sql-data-warehouse-project" target="_blank" rel="noopener noreferrer" aria-label="View SQL Data Warehouse Project on GitHub">↗</a></div></div></article>
-        <article class="project-card project-peach reveal" data-category="sql"><div class="project-visual visual-report"><div class="report-sheet"><div class="report-title-line"></div><div class="report-sub-line"></div><div class="report-chart"><div class="report-donut"><span></span></div><div class="report-legend"><i></i><i></i><i></i><i></i></div></div><div class="report-bottom-lines"><i></i><i></i><i></i></div></div><span class="visual-sticker">03 / DATA ANALYSIS</span></div><div class="project-content"><div class="project-meta"><span>SQL / ANALYTICS</span><span>03</span></div><h3>SQL Data Analytics Project</h3><p>A SQL-based analytics project demonstrating how structured queries can be used to investigate datasets and business questions.</p><div class="project-bottom"><span class="project-type">SQL & analysis</span><a class="project-arrow" href="https://github.com/SwapnilSamarSingh/sql-data-analytics-project" target="_blank" rel="noopener noreferrer" aria-label="View SQL Data Analytics Project on GitHub">↗</a></div></div></article>
+        <article class="project-card project-blue reveal" data-category="dashboard">
+          <div class="project-visual visual-dashboard">
+            <div class="visual-window">
+              <div class="visual-window-top">
+                <span></span><span></span><span></span>
+                <b>SALES DASHBOARD</b>
+              </div>
+              <div class="visual-metrics">
+                <i><b></b><em></em></i>
+                <i><b></b><em></em></i>
+                <i><b></b><em></em></i>
+              </div>
+              <div class="visual-bars">
+                <i style="height:32%"></i><i style="height:48%"></i>
+                <i style="height:41%"></i><i style="height:70%"></i>
+                <i style="height:57%"></i><i style="height:86%"></i>
+                <i style="height:68%"></i><i style="height:100%"></i>
+              </div>
+            </div>
+            <span class="visual-sticker">01 / BUSINESS INTELLIGENCE</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta">
+              <span>POWER BI / DASHBOARD</span><span>01</span>
+            </div>
+            <h3>AdventureWorks Sales Analytics Dashboard</h3>
+            <p>A sales analytics dashboard project focused on presenting business performance through visual analysis.</p>
+            <div class="project-bottom">
+              <span class="project-type">Dashboard</span>
+              <a class="project-arrow"
+                href="https://github.com/SwapnilSamarSingh/AdventureWorks-Sales-Analytics-Dashboard"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="View AdventureWorks Sales Analytics Dashboard on GitHub">↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-lilac reveal" data-category="sql">
+          <div class="project-visual visual-query">
+            <div class="code-window">
+              <div class="code-top">
+                <span></span><span></span><span></span>
+                <small>SQL DATA WAREHOUSE</small>
+              </div>
+              <div class="code-lines">
+                <p><b>01</b> <span class="code-purple">SELECT</span> <span class="code-blue">...</span></p>
+                <p><b>02</b> <span class="code-purple">FROM</span> source_data</p>
+                <p><b>03</b> <span class="code-purple">JOIN</span> related_data</p>
+                <p><b>04</b> <span class="code-purple">ON</span> key = key;</p>
+              </div>
+              <div class="query-result">
+                <span>DATA WORKFLOW</span><i></i><i></i><i></i>
+              </div>
+            </div>
+            <span class="visual-sticker">02 / SQL</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>SQL / DATA WAREHOUSING</span><span>02</span></div>
+            <h3>SQL Data Warehouse Project</h3>
+            <p>A SQL-focused project exploring the organization and preparation of data for analytical use.</p>
+            <div class="project-bottom">
+              <span class="project-type">SQL</span>
+              <a class="project-arrow"
+                href="https://github.com/SwapnilSamarSingh/sql-data-warehouse-project"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="View SQL Data Warehouse Project on GitHub">↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-peach reveal" data-category="sql">
+          <div class="project-visual visual-report">
+            <div class="report-sheet">
+              <div class="report-title-line"></div>
+              <div class="report-sub-line"></div>
+              <div class="report-chart">
+                <div class="report-donut"><span></span></div>
+                <div class="report-legend">
+                  <i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="report-bottom-lines"><i></i><i></i><i></i></div>
+            </div>
+            <span class="visual-sticker">03 / DATA ANALYSIS</span>
+          </div>
+          <div class="project-content">
+            <div class="project-meta"><span>SQL / ANALYTICS</span><span>03</span></div>
+            <h3>SQL Data Analytics Project</h3>
+            <p>A SQL-based analytics project demonstrating how structured queries can be used to investigate datasets and business questions.</p>
+            <div class="project-bottom">
+              <span class="project-type">SQL & analysis</span>
+              <a class="project-arrow"
+                href="https://github.com/SwapnilSamarSingh/sql-data-analytics-project"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="View SQL Data Analytics Project on GitHub">↗</a>
+            </div>
+          </div>
+        </article>
       </div>
-      <div class="projects-note reveal"><span class="note-star">✳</span><p><strong>More work will be added as it is ready.</strong><br>Case studies and new projects will expand this portfolio over time.</p></div>
+
+      <div class="projects-note reveal">
+        <span class="note-star">✳</span>
+        <p><strong>More work will be added as it is ready.</strong><br>
+          Case studies and new projects will expand this portfolio over time.</p>
+      </div>
     </section>
 
-    <section class="section contact-section" id="contact"><div class="container contact-inner"><div class="contact-orb orb-a"></div><div class="contact-orb orb-b"></div><div class="contact-copy reveal"><p class="eyebrow">04 / CONNECT</p><h2>Let's talk about<br>data and insights.</h2><p>Explore my projects and case studies, or get in touch to discuss data analytics, business intelligence, and AI-enabled analytical workflows.</p><a class="button button-light" href="mailto:swapnilfun.singh@gmail.com" id="email-link">Email me <span aria-hidden="true">↗</span></a><p class="contact-helper">swapnilfun.singh@gmail.com</p></div><div class="contact-mark reveal"><div class="contact-mark-inner"><span>DATA</span><b>↗</b><span>WITH</span><strong>SWAPNIL</strong></div><span class="mark-caption">Curious by nature. Analytical by choice.</span></div></div></section>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-inner">
+        <div class="contact-orb orb-a"></div>
+        <div class="contact-orb orb-b"></div>
+
+        <div class="contact-copy reveal">
+          <p class="eyebrow">04 / CONNECT</p>
+          <h2>Let's talk about<br>data and insights.</h2>
+          <p>
+            Explore my projects and case studies, or get in touch to discuss
+            data analytics, business intelligence, and AI-enabled analytical workflows.
+          </p>
+          <a class="button button-light" href="mailto:swapnilfun.singh@gmail.com" id="email-link">
+            Email me <span aria-hidden="true">↗</span>
+          </a>
+          <p class="contact-helper">swapnilfun.singh@gmail.com</p>
+        </div>
+
+        <div class="contact-mark reveal">
+          <div class="contact-mark-inner">
+            <span>DATA</span><b>↗</b><span>WITH</span><strong>SWAPNIL</strong>
+          </div>
+          <span class="mark-caption">Curious by nature. Analytical by choice.</span>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="container footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">D<span>W</span></span><span>Data With <b>Swapnil</b></span></a><p>Designed to grow with the work.</p><a href="#home" class="back-top">Back to top ↑</a><span class="copyright">© <span id="year">2026</span> Data With Swapnil</span></div></footer>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home" aria-label="Data With Swapnil home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M10 11H21C28 11 32 15 32 22S28 33 21 33H10V11Z"
+              stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M19 18H27C31 18 34 21 34 25S31 31 27 31H19"
+              stroke="#A8D5FF" stroke-width="3" stroke-linecap="round"/>
+            <path d="M14 28L19 23L23 26L31 17"
+              stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="31" cy="17" r="2" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <span class="brand-name">Data With <b>Swapnil</b></span>
+      </a>
+
+      <p>Designed to grow with the work.</p>
+      <a href="#home" class="back-top">Back to top ↑</a>
+      <span class="copyright">© <span id="year">2026</span> Data With Swapnil</span>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" type="button"
+    aria-label="Scroll to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 19V5M6 11L12 5L18 11"
+        stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 </body>
 </html>
