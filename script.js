@@ -5,21 +5,21 @@
   const themeLabel = themeToggle?.querySelector('.theme-label');
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
-  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  // Theme preference is saved only in this browser; no personal data is sent anywhere.
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('dws-theme'); } catch (_) {}
+  const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(savedTheme || (systemDark ? 'dark' : 'light'));
 
   function setTheme(theme) {
     root.dataset.theme = theme;
-    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀' : '◐';
-    if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Light appearance' : 'Dark appearance';
+    if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀' : '☾';
+    if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
     if (themeToggle) themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-    if (themeColor) themeColor.content = theme === 'dark' ? '#111216' : '#ffffff';
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.content = theme === 'dark' ? '#0c1220' : '#f7f9fc';
   }
-
-  let savedTheme = null;
-  try { savedTheme = localStorage.getItem('dws-theme'); } catch (_) {}
-  const systemDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
-  setTheme(savedTheme || (systemDark ? 'dark' : 'light'));
-
   themeToggle?.addEventListener('click', () => {
     const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
@@ -37,12 +37,27 @@
     menuToggle?.setAttribute('aria-label', 'Open navigation');
   }));
 
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const projectCards = document.querySelectorAll('.project-card');
+  filterButtons.forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach(item => {
+      const active = item === button;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    projectCards.forEach(card => {
+      const show = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('is-hidden', !show);
+      if (show) card.classList.add('is-visible');
+    });
+  }));
+
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
   const revealItems = document.querySelectorAll('.reveal');
-  const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-  if ('IntersectionObserver' in window && !reducedMotion) {
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -50,9 +65,9 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -25px 0px' });
+    }, { threshold: 0.12 });
     revealItems.forEach((item, index) => {
-      item.style.transitionDelay = `${Math.min(index % 4, 3) * 65}ms`;
+      item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
       observer.observe(item);
     });
   } else {
